@@ -1,0 +1,67 @@
+import React from 'react';
+
+const TeachLabDiagram = () => {
+  const CorePillar = ({ title, subtitle }) => (
+    <div className="bg-green-100 p-4 rounded-lg border border-green-500 text-center w-48">
+      <div className="font-semibold text-green-800">{title}</div>
+      <div className="text-sm text-green-600">{subtitle}</div>
+    </div>
+  );
+
+  const ProcessStep = ({ title, subtitle }) => (
+    <div className="bg-blue-100 p-4 rounded-lg border border-blue-500 text-center w-48">
+      <div className="font-semibold text-blue-800">{title}</div>
+      <div className="text-sm text-blue-600">{subtitle}</div>
+    </div>
+  );
+
+  const Component = ({ title, subtitle }) => (
+    <div className="bg-yellow-100 p-4 rounded-lg border border-yellow-500 text-center w-48">
+      <div className="font-semibold text-yellow-800">{title}</div>
+      <div className="text-sm text-yellow-600">{subtitle}</div>
+    </div>
+  );
+
+  return (
+    <div className="bg-gray-50 p-8 rounded-xl max-w-6xl mx-auto">
+      {/* Core Pillars Section */}
+      <div className="mb-8">
+        <h2 className="text-lg font-bold text-gray-700 mb-4 text-center">Core Pillars</h2>
+        <div className="flex justify-center gap-4 flex-wrap">
+          <CorePillar title="Head" subtitle="Academic Content & Standards" />
+          <CorePillar title="Heart" subtitle="Teacher-Led Community" />
+          <CorePillar title="Habits" subtitle="Inquiry Cycles" />
+          <CorePillar title="Equity" subtitle="Equal Learning Opportunities" />
+        </div>
+      </div>
+
+      {/* Implementation Process Section */}
+      <div className="mb-8">
+        <h2 className="text-lg font-bold text-gray-700 mb-4 text-center">Implementation Process</h2>
+        <div className="flex flex-col items-center gap-4">
+          <ProcessStep title="Initial Formation" subtitle="of Labs" />
+          <div className="h-8 w-px bg-blue-500" />
+          <ProcessStep title="Learning Session" subtitle="New Strategies" />
+          <div className="h-8 w-px bg-blue-500" />
+          <ProcessStep title="Classroom Implementation" subtitle="" />
+          <div className="h-8 w-px bg-blue-500" />
+          <ProcessStep title="Analysis & Reflection" subtitle="" />
+          <div className="h-8 w-px bg-blue-500" />
+          <ProcessStep title="Continuous Improvement" subtitle="" />
+        </div>
+      </div>
+
+      {/* Key Components Section */}
+      <div>
+        <h2 className="text-lg font-bold text-gray-700 mb-4 text-center">Key Components</h2>
+        <div className="flex justify-center gap-4 flex-wrap">
+          <Component title="Labs" subtitle="Small Teacher Groups" />
+          <Component title="Lab Leaders" subtitle="Mentors" />
+          <Component title="Professional Learning" subtitle="Community" />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default TeachLabDiagram;
